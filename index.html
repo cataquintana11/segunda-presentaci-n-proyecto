@@ -2,10 +2,118 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=presentacion-e2.html">
-  <title>TA-DIN · Redirigiendo…</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TA-DIN · Entregable 2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #111E2E;
+      font-family: 'Barlow', sans-serif;
+      gap: 2.5rem;
+      padding: 2rem;
+    }
+    .brand {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      color: #F2F6FA;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .tagline {
+      font-size: clamp(0.9rem, 2vw, 1.1rem);
+      font-weight: 300;
+      color: #C8DAE9;
+      text-align: center;
+      font-style: italic;
+      max-width: 480px;
+      line-height: 1.55;
+      margin-top: -1.5rem;
+    }
+    .badges {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: -1rem;
+    }
+    .badge {
+      background: #243D5C;
+      color: #F2F6FA;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid #3B5F8A;
+    }
+    .links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.85rem 1.8rem;
+      border-radius: 10px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: transform 0.18s, opacity 0.18s;
+    }
+    .btn:hover { transform: translateY(-2px); opacity: 0.88; }
+    .btn-primary {
+      background: #243D5C;
+      color: #F2F6FA;
+      border: 1px solid #3B5F8A;
+    }
+    .btn-outline {
+      background: transparent;
+      color: #C8DAE9;
+      border: 1px solid rgba(242,246,250,0.2);
+    }
+    .divider {
+      width: 50px;
+      height: 3px;
+      background: #3B5F8A;
+      border-radius: 999px;
+    }
+  </style>
 </head>
 <body>
-  <p>Redirigiendo a la presentación… <a href="presentacion-e2.html">Hacer clic aquí si no redirige.</a></p>
+  <h1 class="brand">TADIN</h1>
+  <p class="tagline">Digitalización de procesos para una empresa de pintura electrostática</p>
+  <div class="badges">
+    <span class="badge">Proyecto 1</span>
+    <span class="badge">Equipo N°6</span>
+    <span class="badge">7mo Informática B</span>
+    <span class="badge">Julio 2026</span>
+  </div>
+  <div class="divider"></div>
+  <div class="links">
+    <a href="presentacion-e2.html" class="btn btn-primary">
+      &#9654; Ver Presentación E2
+    </a>
+    <a href="http://tadin.com.ar/" target="_blank" rel="noopener" class="btn btn-outline">
+      &#127760; Ir al MVP — tadin.com.ar
+    </a>
+  </div>
 </body>
 </html>
