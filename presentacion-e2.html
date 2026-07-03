@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TA-DIN · Entregable 2 | MVP Operativo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ════════════════ NAV ════════════════ -->
+  <nav class="slide-nav">
+    <div class="nav-left">
+      <span class="nav-brand">TA·DIN</span>
+      <span class="nav-tag">Entregable 2 — MVP Operativo</span>
+    </div>
+    <div class="nav-controls">
+      <span class="slide-counter" id="counter">1 / 19</span>
+      <button class="nav-btn" id="prev" onclick="go(-1)">&#8592;</button>
+      <button class="nav-btn" id="next" onclick="go(+1)">&#8594;</button>
+    </div>
+  </nav>
+
+  <div class="slides-container">
+
+    <!-- ══════════════════════════════════════
+         S1 · CARATULA (PORTADA)
+         ══════════════════════════════════════ -->
+    <div class="slide active" id="s1">
+      <div class="cover-slide">
+        <div class="cover-top">
+          <div class="cover-meta">
+            <span class="cover-badge">Proyecto 1</span>
+            <span class="cover-badge">Equipo N°6</span>
+            <span class="cover-badge">7mo Informática B</span>
+            <span class="cover-badge">Julio 2026</span>
+          </div>
+          <h1 class="cover-brand">TADIN</h1>
+          <p class="cover-tagline">Digitalización de procesos para una empresa de pintura electrostática</p>
+          <div class="cover-divider"></div>
+        </div>
+        <div class="cover-team">
+          <div class="team-card">
+            <div class="team-initials">MN</div>
+            <div class="team-name">Mía Niello</div>
+            <div class="team-role">PM / Frontend</div>
+          </div>
+          <div class="team-card">
+            <div class="team-initials">CQ</div>
+            <div class="team-name">Catalina Quintana</div>
+            <div class="team-role">Frontend · UX/UI</div>
+          </div>
+          <div class="team-card">
+            <div class="team-initials">TB</div>
+            <div class="team-name">Tatiana Bravo</div>
+            <div class="team-role">Backend</div>
+          </div>
+          <div class="team-card">
+            <div class="team-initials">NP</div>
+            <div class="team-name">Nicolás Perri</div>
+            <div class="team-role">DB · Backend</div>
+          </div>
+          <div class="team-card">
+            <div class="team-initials">MC</div>
+            <div class="team-name">Milagros Camino</div>
+            <div class="team-role">Infraestructura · Seguridad</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         S2 · 01 · OBJETIVO DE LA ENTREGA
+         ══════════════════════════════════════ -->
+    <div class="slide" id="s2">
+      <div class="slide-hero">
+        <div class="slide-number">01</div>
+        <span class="label-tag">Entregable 2</span>
+        <h1 class="slide-title">Objetivo de la Entrega</h1>
+        <div class="divider d-accent"></div>
+        <p class="slide-lead">
+          El presente entregable constituye el <strong>Producto Mínimo Viable (MVP)</strong> operativo para la empresa TA-DIN.
+          Su propósito es validar de extremo a extremo <em>(End-to-End)</em> la arquitectura técnica implementada,
+          garantizando la correcta comunicación entre la interfaz de usuario, la lógica de negocio en el servidor y
+          la persistencia de datos en el motor relacional, sentando las bases para la futura certificación de procesos
+          bajo la norma <strong>ISO 9001</strong>.
+        </p>
+        <div class="chips">
+          <span class="chip">Frontend Validado</span>
+          <span class="chip">Backend Activo</span>
+          <span class="chip">BD Conectada</span>
+          <span class="chip">E2E Verificado</span>
+          <span class="chip">ISO 9001</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         S3 · 02 · REQUISITOS — PÁGINA WEB
+         ══════════════════════════════════════ -->
+    <div class="slide" id="s3">
+      <div class="slide-content">
+        <div class="slide-number">02</div>
+        <h2 class="slide-title">Requisitos por Capas — Página Web</h2>
+        <div class="divider d-accent"></div>
+
+        <div class="col-2" style="margin-top:0.9rem;">
+
+          <div class="req-block">
+            <div class="req-block-title">A. Frontend — Interfaz y Navegación</div>
+            <div class="req-group">
+              <ul>
+                <li><strong>Vistas Clave:</strong> Interfaz completamente codificada para Home y el Dashboard o catálogo principal, basadas en el mockup.</li>
+                <li><strong>Navegación Fluida:</strong> Enrutamiento real y funcional entre las vistas sin recargas innecesarias de página.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="req-block">
+            <div class="req-block-title">B. Backend y Base de Datos</div>
+            <div class="req-group">
+              <h5>1. Estructura de Datos y Persistencia</h5>
+              <ul>
+                <li><strong>Arquitectura estática:</strong> El proyecto web ha sido concebido bajo una arquitectura estática orientada a la presentación de información. No requiere motor de base de datos activa.</li>
+                <li><strong>Ausencia de Tablas Relacionales:</strong> El objetivo exclusivo del sitio es la visualización de contenido y redirección mediante hipervínculos. Toda la información está estructurada directamente en HTML y CSS.</li>
+                <li><strong>Despliegue e Infraestructura:</strong> Los archivos fuente fueron transferidos y desplegados en el hosting <strong>DonWeb</strong> mediante el cliente FTP FileZilla, operando bajo el dominio propio del proyecto.</li>
+              </ul>
+            </div>
+            <div class="req-group">
+              <h5>2. Endpoints y Comunicación HTTP</h5>
+              <ul>
+                <li><strong>Arquitectura Serverless/Static:</strong> El proyecto no expone una API REST ni posee endpoints operativos para lógica de negocio.</li>
+                <li><strong>Resolución de Peticiones:</strong> El servidor en DonWeb solo despacha el documento estático frente a las peticiones HTTP. La navegación se resuelve a través del enrutamiento nativo del navegador hacia URLs externas o secciones internas de la página.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         S4 · 03 · REQUISITOS — RELOJ BIOMÉTRICO
+         ══════════════════════════════════════ -->
+    <div class="slide" id="s4">
+      <div class="slide-content">
+        <div class="slide-number">03</div>
+        <h2 class="slide-title">Requisitos por Capas — Reloj Biométrico</h2>
+        <div class="divider d-accent"></div>
+
+        <div class="col-2" style="margin-top:0.9rem;">
+
+          <div class="req-block">
+            <div class="req-block-title">Interfaces del Dispositivo</div>
+            <div class="req-group">
+              <h5>1. Interfaz de Empleado (Marcación Rápida)</h5>
+              <ul>
+                <li><strong>Pantalla de espera:</strong> Reloj digital en tiempo real y mensaje de instrucción para colocar la huella.</li>
+                <li><strong>Confirmación:</strong> Al detectar la huella, muestra por 2 s la foto del empleado, nombre, hora e indicador visual (Verde = Éxito / Rojo = Error).</li>
+              </ul>
+            </div>
+            <div class="req-group">
+              <h5>2. Panel de Administrador (Navegación Lateral)</h5>
+              <ul>
+                <li><strong>Dashboard:</strong> Gráficos en tiempo real con el estado del personal (presentes, ausentes, llegadas tarde).</li>
+                <li><strong>Gestión de Usuarios:</strong> Registro de empleados y enrolamiento de huellas.</li>
+                <li><strong>Reportes:</strong> Filtros para consultar y exportar el historial de asistencia.</li>
+                <li><strong>Configuración:</strong> Sincronización del dispositivo y horarios.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="req-block">
+            <div class="req-block-title">B. Backend y Base de Datos (ZKBioTime.Net)</div>
+            <div class="req-group">
+              <h5>Base de Datos Activa</h5>
+              <ul>
+                <li><strong>Motor BD:</strong> SQLite por defecto · compatible con SQL Server, MySQL o PostgreSQL.</li>
+                <li><strong>Tabla Usuarios:</strong> ID_Usuario, Nombre, Apellido, plantillas biométricas codificadas (huellas y rostros).</li>
+                <li><strong>Tabla Registros:</strong> ID_Registro, ID_Usuario, FechaHora_Marcacion, Tipo_Movimiento (Entrada/Salida).</li>
+              </ul>
+            </div>
+            <div class="req-group">
+              <h5>Endpoints y Protocolo de Comunicación</h5>
+              <ul>
+                <li><strong>Protocolo estándar:</strong> Comunicación TCP/IP directa en la red local · Puerto 4370 (no REST/HTTP).</li>
+                <li><strong>Transmisión:</strong> El software usa protocolo propietario ZKTeco para autenticar y descargar logs.</li>
+                <li><strong>Alternativa técnica:</strong> SDK de ZKTeco en C# o Python para desarrollar API personalizada con endpoints HTTP propios.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         S5 · 04 · RELOJ BIOMÉTRICO — Imagen 1/4
+         ══════════════════════════════════════ -->
+    <div class="slide" id="s5">
+      <div class="ftp-slide">
+        <div class="ftp-slide-header">
+          <div>
+            <span class="label-tag">Reloj Biométrico — Sistema ZKBioTime.Net</span>
+            <p class="ftp-subtitle">Evidencia del sistema implementado</p>
+          </div>
+          <div class="ftp-progress">
+            <span class="fp active">1</span>
+            <span class="fp">2</span>
+            <span class="fp">3</span>
+            <span class="fp">4</span>
+          </div>
+        </div>
+        <div class="ftp-slide-body">
+          <div class="ftp-text-col">
+            <div class="ftp-big-num">04</div>
+            <h2>Vista del Sistema</h2>
+            <div class="divider d-accent"></div>
+            <p>
+              El software <strong>ZKBioTime.Net</strong> actúa como middleware oficial del dispositivo biométrico,
+              gestionando de forma automática la estructura relacional de los datos de asistencia.
+            </p>
+            <p style="margin-top:0.75rem;">
+              Se instala con base de datos local <strong>SQLite</strong> por defecto,
+              con compatibilidad para motores más robustos como SQL Server, MySQL o PostgreSQL.
+            </p>
+          </div>
+          <div class="ftp-img-col">
+            <img src="Img%20e2/Img_e2_9.jpeg" alt="Reloj Biométrico — Vista del sistema 1" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         S6 · 05 · RELOJ BIOMÉTRICO — Imagen 2/4
+         ══════════════════════════════════════ -->
+    <div class="slide" id="s6">
+      <div class="ftp-slide">
+        <div class="ftp-slide-header">
+          <div>
+            <span class="label-tag">Reloj Biométrico — Sistema ZKBioTime.Net</span>
+            <p class="ftp-subtitle">Evidencia del sistema implementado</p>
+          </div>
+          <div class="ftp-progress">
+            <span class="fp">1</span>
+            <span class="fp active">2</span>
+            <span class="fp">3</span>
+            <span class="fp">4</span>
+          </div>
+        </div>
+        <div class="ftp-slide-body">
+          <div class="ftp-text-col">
+            <div class="ftp-big-num">05</div>
+            <h2>Panel de Administrador</h2>
+            <div class="divider d-accent"></div>
+            <p>
+              El panel de administración de <strong>ZKBioTime.Net</strong> proporciona una vista centralizada
+              del estado del personal en tiempo real: presentes, ausentes y llegadas tarde.
+            </p>
+            <p style="margin-top:0.75rem;">
+              Desde aquí el administrador gestiona el registro de empleados,
+              el enrolamiento de huellas y la exportación de reportes de asistencia.
+            </p>
+          </div>
+          <div class="ftp-img-col">
+            <img src="Img%20e2/Img_e2_10.jpeg" alt="Reloj Biométrico — Vista del sistema 2" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         S7 · 06 · RELOJ BIOMÉTRICO — Imagen 3/4
+         ══════════════════════════════════════ -->
+    <div class="slide" id="s7">
+      <div class="ftp-slide">
+        <div class="ftp-slide-header">
+          <div>
+            <span class="label-tag">Reloj Biométrico — Sistema ZKBioTime.Net</span>
+            <p class="ftp-subtitle">Evidencia del sistema implementado</p>
+          </div>
+          <div class="ftp-progress">
+            <span class="fp">1</span>
+            <span class="fp">2</span>
+            <span class="fp active">3</span>
+            <span class="fp">4</span>
+          </div>
+        </div>
+        <div class="ftp-slide-body">
+          <div class="ftp-text-col">
+            <div class="ftp-big-num">06</div>
+            <h2>Gestión de Usuarios y Enrolamiento</h2>
+            <div class="divider d-accent"></div>
+            <p>
+              La gestión de usuarios permite registrar a cada empleado con sus datos personales
+              (<code>ID_Usuario</code>, Nombre, Apellido) y vincularlos a sus plantillas biométricas codificadas.
+            </p>
+            <p style="margin-top:0.75rem;">
+              El proceso de enrolamiento captura las huellas dactilares y datos de rostro,
+              almacenándolos de forma segura en la base de datos del sistema.
+            </p>
+          </div>
+          <div class="ftp-img-col">
+            <img src="Img%20e2/Img_e2_11.jpeg" alt="Reloj Biométrico — Vista del sistema 3" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         S8 · 07 · RELOJ BIOMÉTRICO — Imagen 4/4
+         ══════════════════════════════════════ -->
+    <div class="slide" id="s8">
+      <div class="ftp-slide">
+        <div class="ftp-slide-header">
+          <div>
+            <span class="label-tag">Reloj Biométrico — Sistema ZKBioTime.Net</span>
+            <p class="ftp-subtitle">Evidencia del sistema implementado</p>
+          </div>
+          <div class="ftp-progress">
+            <span class="fp">1</span>
+            <span class="fp">2</span>
+            <span class="fp">3</span>
+            <span class="fp active">4</span>
+          </div>
+        </div>
+        <div class="ftp-slide-body">
+          <div class="ftp-text-col">
+            <div class="ftp-big-num">07</div>
+            <h2>Comunicación TCP/IP · Puerto 4370</h2>
+            <div class="divider d-accent"></div>
+            <p>
+              La comunicación entre el reloj y el software se realiza por protocolo <strong>TCP/IP</strong>
+              de forma directa en la red local, operando en el <strong>Puerto 4370</strong>,
+              sin necesidad de endpoints HTTP convencionales.
+            </p>
+            <p style="margin-top:0.75rem;">
+              El software envía peticiones empaquetadas usando el protocolo propietario de <strong>ZKTeco</strong>
+              para autenticar al administrador y descargar el listado de logs de asistencia.
+            </p>
+          </div>
+          <div class="ftp-img-col">
+            <img src="Img%20e2/Img_e2_12.jpeg" alt="Reloj Biométrico — Vista del sistema 4" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         S9 · 08 · MATRIZ DE EVALUACIÓN
+         ══════════════════════════════════════ -->
+    <div class="slide" id="s9">
+      <div class="slide-content">
+        <div class="slide-number">08</div>
+        <h2 class="slide-title">Matriz de Evaluación del Avance</h2>
+        <div class="divider d-accent"></div>
+
+        <div class="col-2" style="margin-top:1rem;">
+
+          <div class="flow-card">
+            <div class="flow-card-title">1. Flujo de Usuarios (User Journey B2B)</div>
+            <p class="flow-card-desc">Recorrido visual y operativo que realiza un cliente potencial desde su ingreso a la web hasta que completa el formulario.</p>
+            <div class="flow-steps">
+              <div class="flow-step">
+                <div class="step-badge">01</div>
+                <div class="flow-step-body">
+                  <strong>Punto de Entrada (Descubrimiento)</strong>
+                  <p>El usuario llega al Inicio, asimila la propuesta de valor y valida la solidez de la empresa.</p>
+                </div>
+              </div>
+              <div class="flow-step">
+                <div class="step-badge">02</div>
+                <div class="flow-step-body">
+                  <strong>Evaluación de Confianza</strong>
+                  <p>Explora la sección <em>Nosotros</em> y la sección <em>Soluciones</em> para verificar que el servicio cubra los requerimientos técnicos de su industria.</p>
+                </div>
+              </div>
+              <div class="flow-step">
+                <div class="step-badge">03</div>
+                <div class="flow-step-body">
+                  <strong>Conversión (Puntos de Salida)</strong>
+                  <p><strong>WhatsApp</strong> — Botón "Contactar un Asesor" para atención inmediata.<br>
+                     <strong>Email</strong> — Botón flotante o enlaces para cotizaciones formales.<br>
+                     <strong>Instagram</strong> — Proyectos ejecutados en tiempo real.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flow-card">
+            <div class="flow-card-title">2. Flujo de Datos del Negocio</div>
+            <p class="flow-card-desc">La información se filtra automáticamente según su naturaleza hacia el canal correspondiente.</p>
+            <div class="flow-steps">
+              <div class="flow-step">
+                <div class="step-badge">A</div>
+                <div class="flow-step-body">
+                  <strong>Procesamiento y Enrutamiento</strong>
+                  <p>Datos de contacto directo → <strong>Asesores Técnicos</strong> para atención inmediata.<br>
+                     Pliegos y solicitudes formales → <strong>Formulario de cotización</strong>.</p>
+                </div>
+              </div>
+              <div class="flow-step">
+                <div class="step-badge">B</div>
+                <div class="flow-step-body">
+                  <strong>Dominio en Producción</strong>
+                  <p>El sitio opera de forma pública y funcional en <strong>tadin.com.ar</strong>, desplegado en el hosting DonWeb mediante FTP.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         S10 · 09 · MOCKUP INTERACTIVO / RF TABLE
+         ══════════════════════════════════════ -->
+    <div class="slide" id="s10">
+      <div class="slide-content c-light">
+        <div class="slide-number on-accent">09</div>
+        <h2 class="slide-title on-light">Mockup Interactivo (HTML) y Validación con el Cliente</h2>
+        <div class="divider d-dark"></div>
+
+        <span class="module-label">Módulo A: Sitio Web — Plataforma Comercial</span>
+
+        <div class="table-wrap">
+          <table class="rf-table">
+            <thead>
+              <tr>
+                <th style="width:20%">Req. Funcional</th>
+                <th style="width:19%">Caso de Uso</th>
+                <th style="width:31%">Vista del Frontend</th>
+                <th style="width:30%">Respaldo en Backend</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>RF-01:</strong> Presentar identidad institucional de TA-DIN (quiénes son, servicios y datos de contacto) adaptada a cualquier dispositivo.</td>
+                <td><strong>CU-01:</strong> Visualizar Información Institucional de TA-DIN.</td>
+                <td>HTML5/CSS — Secciones: Inicio, Nosotros, Soluciones, Identidad, ¿Por qué elegirnos? y Contacto. Responsive en todos los dispositivos.</td>
+                <td>El sitio es 100% estático (HTML/CSS), prescinde de bases de datos y lógica dinámica. Los archivos se subieron al hosting <strong>DonWeb</strong> mediante FileZilla (FTP). No posee backend ni API REST. El servidor solo despacha el archivo estático inicial; la navegación queda en manos del enrutamiento nativo del navegador.</td>
+              </tr>
+              <tr>
+                <td><strong>RF-02:</strong> Formulario para clientes con validación de campos clave: Nombre, Correo, Teléfono y Mensaje.</td>
+                <td><strong>CU-02:</strong> Realizar una consulta como cliente. TA-DIN recibe registro en Drive mediante Google Forms.</td>
+                <td>Google Forms — frameworks internos de Google (Closure / Angular-like). Vista pública ligera y responsive. Panel de respuestas con gráficos reactivos automáticos.</td>
+                <td>Google Drive — almacenamiento masivo y de alta disponibilidad en Bigtable / Spanner, capaces de procesar millones de respuestas por segundo.</td>
+              </tr>
+              <tr>
+                <td><strong>RF-03:</strong> Permitir contacto vía WhatsApp, Email e Instagram y completar el formulario de consulta.</td>
+                <td><strong>CU-03:</strong> El usuario interactúa con los canales de comunicación (WhatsApp, Email, Instagram) o completa formulario técnico/comercial.</td>
+                <td>Botón flotante WhatsApp (<code>api.whatsapp.com/send</code>) · Enlace <code>mailto:info@ta-din.com</code> · Ícono Instagram al perfil oficial.</td>
+                <td class="td-na">—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         S11 · 10 · FTP — PASO 1
+         ══════════════════════════════════════ -->
+    <div class="slide" id="s11">
+      <div class="ftp-slide">
+        <div class="ftp-slide-header">
+          <div>
+            <span class="label-tag">Paso a Paso FTP</span>
+            <p class="ftp-subtitle">FileZilla Client v3.70.6 — Despliegue al servidor DonWeb</p>
+          </div>
+          <div class="ftp-progress">
+            <span class="fp active">1</span>
+            <span class="fp">2</span>
+            <span class="fp">3</span>
+            <span class="fp">4</span>
+            <span class="fp">5</span>
+          </div>
+        </div>
+        <div class="ftp-slide-body">
+          <div class="ftp-text-col">
+            <div class="ftp-big-num">10</div>
+            <h2>Instalación y Acuerdo de Licencia</h2>
+            <div class="divider d-accent"></div>
+            <p>
+              Al ejecutar el instalador de <strong>FileZilla Client (versión 3.70.6)</strong>, la primera ventana
+              que aparece es el <em>"License Agreement"</em> (Acuerdo de Licencia).
+              Leer los términos de uso y hacer clic en el botón <strong>"I Agree"</strong> (Acepto),
+              ubicado en la parte inferior derecha, para continuar con la instalación.
+            </p>
+          </div>
+          <div class="ftp-img-col">
+            <img src="Img%20e2/Img_e2_3.jpeg" alt="FileZilla — Acuerdo de Licencia" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         S12 · 11 · FTP — PASO 2
+         ══════════════════════════════════════ -->
+    <div class="slide" id="s12">
+      <div class="ftp-slide">
+        <div class="ftp-slide-header">
+          <div>
+            <span class="label-tag">Paso a Paso FTP</span>
+            <p class="ftp-subtitle">FileZilla Client v3.70.6 — Despliegue al servidor DonWeb</p>
+          </div>
+          <div class="ftp-progress">
+            <span class="fp">1</span>
+            <span class="fp active">2</span>
+            <span class="fp">3</span>
+            <span class="fp">4</span>
+            <span class="fp">5</span>
+          </div>
+        </div>
+        <div class="ftp-slide-body">
+          <div class="ftp-text-col">
+            <div class="ftp-big-num">11</div>
+            <h2>Primer Inicio y Bienvenida</h2>
+            <div class="divider d-accent"></div>
+            <p>
+              Una vez instalado, al abrir el programa por primera vez FileZilla muestra un cuadro
+              titulado <em>"Bienvenido a FileZilla"</em>, con enlaces hacia la documentación y foros de soporte.
+            </p>
+            <p style="margin-top:0.75rem;">
+              Hacer clic en <strong>"Aceptar"</strong> para cerrar el mensaje y acceder a la interfaz principal de trabajo.
+            </p>
+          </div>
+          <div class="ftp-img-col">
+            <img src="Img%20e2/Img_e2_4.jpeg" alt="FileZilla — Pantalla de bienvenida" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         S13 · 12 · FTP — PASO 3
+         ══════════════════════════════════════ -->
+    <div class="slide" id="s13">
+      <div class="ftp-slide">
+        <div class="ftp-slide-header">
+          <div>
+            <span class="label-tag">Paso a Paso FTP</span>
+            <p class="ftp-subtitle">FileZilla Client v3.70.6 — Despliegue al servidor DonWeb</p>
+          </div>
+          <div class="ftp-progress">
+            <span class="fp">1</span>
+            <span class="fp">2</span>
+            <span class="fp active">3</span>
+            <span class="fp">4</span>
+            <span class="fp">5</span>
+          </div>
+        </div>
+        <div class="ftp-slide-body">
+          <div class="ftp-text-col">
+            <div class="ftp-big-num">12</div>
+            <h2>Credenciales y Configuración de Conexión</h2>
+            <div class="divider d-accent"></div>
+            <p>Ingresar los datos del proveedor de alojamiento en la barra superior:</p>
+            <p style="margin-top:0.6rem;">
+              · <strong>Servidor:</strong> <code>c1751957.ferozo.co</code><br>
+              · <strong>Nombre de usuario:</strong> <code>c1751957</code><br>
+              · <strong>Contraseña:</strong> clave secreta de acceso FTP
+            </p>
+            <p style="margin-top:0.6rem;">
+              Presionar <strong>"Conexión rápida"</strong>. En el aviso de seguridad,
+              seleccionar <strong>"Guardar contraseñas"</strong> y confirmar con <strong>"Aceptar"</strong>.
+            </p>
+          </div>
+          <div class="ftp-img-col">
+            <img src="Img%20e2/Img_e2_5.jpeg" alt="FileZilla — Ingreso de credenciales" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         S14 · 13 · FTP — PASO 4
+         ══════════════════════════════════════ -->
+    <div class="slide" id="s14">
+      <div class="ftp-slide">
+        <div class="ftp-slide-header">
+          <div>
+            <span class="label-tag">Paso a Paso FTP</span>
+            <p class="ftp-subtitle">FileZilla Client v3.70.6 — Despliegue al servidor DonWeb</p>
+          </div>
+          <div class="ftp-progress">
+            <span class="fp">1</span>
+            <span class="fp">2</span>
+            <span class="fp">3</span>
+            <span class="fp active">4</span>
+            <span class="fp">5</span>
+          </div>
+        </div>
+        <div class="ftp-slide-body">
+          <div class="ftp-text-col">
+            <div class="ftp-big-num">13</div>
+            <h2>Acceso al Directorio Público del Host</h2>
+            <div class="divider d-accent"></div>
+            <p>
+              Al conectarse, la interfaz se divide en dos paneles. En el panel derecho
+              <em>"Sitio remoto"</em> se listan las carpetas raíz del servidor
+              (<code>etc</code>, <code>logos</code>, <code>mail</code>, <code>storagedir</code>).
+            </p>
+            <p style="margin-top:0.75rem;">
+              Localizar y hacer doble clic en la carpeta <strong>public_html</strong>,
+              que es la carpeta pública fundamental donde se aloja el proyecto web.
+            </p>
+          </div>
+          <div class="ftp-img-col">
+            <img src="Img%20e2/Img_e2_6.jpeg" alt="FileZilla — Acceso a public_html" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         S15 · 14 · FTP — PASO 5
+         ══════════════════════════════════════ -->
+    <div class="slide" id="s15">
+      <div class="ftp-slide">
+        <div class="ftp-slide-header">
+          <div>
+            <span class="label-tag">Paso a Paso FTP</span>
+            <p class="ftp-subtitle">FileZilla Client v3.70.6 — Despliegue al servidor DonWeb</p>
+          </div>
+          <div class="ftp-progress">
+            <span class="fp">1</span>
+            <span class="fp">2</span>
+            <span class="fp">3</span>
+            <span class="fp">4</span>
+            <span class="fp active">5</span>
+          </div>
+        </div>
+        <div class="ftp-slide-body">
+          <div class="ftp-text-col">
+            <div class="ftp-big-num">14</div>
+            <h2>Gestión de los Archivos del Proyecto</h2>
+            <div class="divider d-accent"></div>
+            <p>
+              Dentro de <strong>public_html</strong>, el panel inferior derecho muestra los archivos internos,
+              incluyendo el archivo principal <code>index.html</code>.
+            </p>
+            <p style="margin-top:0.75rem;">
+              Transferir archivos arrastrándolos desde el panel local (izquierda, <em>"Sitio local"</em>)
+              hacia el remoto (derecha) para subirlos al host, o en sentido inverso para descargarlos,
+              manteniendo el proyecto completamente actualizado.
+            </p>
+          </div>
+          <div class="ftp-img-col">
+            <img src="Img%20e2/Img_e2_7.jpeg" alt="FileZilla — Gestión de archivos en public_html" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         S16 · 15 · DESIGN SYSTEM
+         ══════════════════════════════════════ -->
+    <div class="slide" id="s16">
+      <div class="slide-content c-section">
+        <div class="slide-number on-accent">15</div>
+        <h2 class="slide-title on-light">Design System</h2>
+        <div class="divider d-dark"></div>
+
+        <div class="ds-grid">
+
+          <div class="ds-card">
+            <div class="ds-card-title">Colores de Fondo (Background)</div>
+            <div class="swatches">
+              <div class="swatch" style="background:#FDFDFB;border:1px solid #bbb;"><span style="color:#111E2E">#FDFDFB</span></div>
+              <div class="swatch" style="background:#EAECF2;border:1px solid #bbb;"><span style="color:#111E2E">#EAECF2</span></div>
+              <div class="swatch" style="background:#FFFEee;border:1px solid #bbb;"><span style="color:#111E2E">#FFFEee</span></div>
+              <div class="swatch" style="background:#111E2E;"><span style="color:#F2F6FA">#111E2E</span></div>
+              <div class="swatch" style="background:#1A2D44;"><span style="color:#F2F6FA">#1A2D44</span></div>
+              <div class="swatch" style="background:#09111A;"><span style="color:#F2F6FA">#09111A</span></div>
+            </div>
+            <p class="ds-card-note">
+              <strong>Claro:</strong> #FDFDFB (general) · #EAECF2 (sección Soluciones) · #FFFEee (tarjetas).<br>
+              <strong>Oscuro:</strong> #111E2E (bloques) · gradiente radial con #1A2D44 (inicio) · #09111A (footer).
+            </p>
+          </div>
+
+          <div class="ds-card">
+            <div class="ds-card-title">Colores de Fuente (Texto) y Aviso</div>
+            <div class="swatches">
+              <div class="swatch" style="background:#111E2E;"><span style="color:#F2F6FA">#111E2E</span></div>
+              <div class="swatch" style="background:#5A6571;"><span style="color:#FFFFFF">#5A6571</span></div>
+              <div class="swatch" style="background:#FFFEee;border:1px solid #bbb;"><span style="color:#111E2E">#FFFEee</span></div>
+              <div class="swatch" style="background:#243D5C;"><span style="color:#FFFFFF">#243D5C</span></div>
+            </div>
+            <p class="ds-card-note">
+              <strong>Principal:</strong> #111E2E &nbsp;·&nbsp; <strong>Secundario:</strong> #5A6571.<br>
+              <strong>Sobre fondos oscuros:</strong> #FFFEee + rgba(253,253,251,0.65) / 0.45.<br>
+              <strong>CTA / Aviso / Acento:</strong> #243D5C — sin variables de Error, Warning ni Success al ser sitio institucional.
+            </p>
+          </div>
+
+          <div class="ds-card">
+            <div class="ds-card-title">Tamaños de Pantalla (Responsive)</div>
+            <div class="bp-list">
+              <div class="bp-row">
+                <span class="bp-name">Fullscreen</span>
+                <span class="bp-desc">Clase .wrap: max-width 1180 px · margen lateral 90 % pantalla.</span>
+              </div>
+              <div class="bp-row">
+                <span class="bp-name">Tablet</span>
+                <span class="bp-desc">≤ 1060 px — rejillas de 4 → 2 columnas; bloques de métricas apilados.</span>
+              </div>
+              <div class="bp-row">
+                <span class="bp-name">Mobile</span>
+                <span class="bp-desc">≤ 720 px — cuadrículas a 1 columna; menú de navegación en columna.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ds-card">
+            <div class="ds-card-title">Menú y Logo</div>
+            <div class="menu-preview">
+              <span class="mp-brand">TA·DIN</span>
+              <span class="mp-link">Inicio</span>
+              <span class="mp-link">Nosotros</span>
+              <span class="mp-link">Soluciones</span>
+              <span class="mp-cta">Contactar</span>
+            </div>
+            <p class="ds-card-note">
+              <strong>Menú:</strong> position: sticky · sombra rgba(17,30,46,0.07) · desktop: horizontal · mobile ≤ 720 px: flex-column.<br>
+              <strong>Logo:</strong> Barlow Condensed uppercase · "TA·DIN" · imagen <em>Gemini_Generated_Image</em> con <code>onerror="display:none"</code>.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         S17 · 16 · DOCUMENTACIÓN DE AVANCES
+         ══════════════════════════════════════ -->
+    <div class="slide" id="s17">
+      <div class="slide-content c-light">
+        <div class="slide-number on-accent">16</div>
+        <h2 class="slide-title on-light">Documentación de Avances</h2>
+        <div class="divider d-dark"></div>
+
+        <div class="col-2" style="margin-top:0.9rem;align-items:start;">
+
+          <div>
+            <p class="section-heading">Registro de Entrevistas y Minutas</p>
+            <div class="doc-table-wrap">
+              <table class="doc-table">
+                <thead>
+                  <tr><th style="width:22%"></th><th>Entrevista N° 1</th><th>Entrevista N° 2</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Fecha</td><td>15/04/2026</td><td>12/06/2026</td></tr>
+                  <tr><td>Participantes</td><td>Silvana y Sergio + PM, D03, DUX, IS</td><td>Silvana y Sergio + PM, DUX, D03, BD, IS</td></tr>
+                  <tr><td>Objetivo</td><td>Validación 1: idear el proyecto, validar alcance y presentar diseño preliminar.</td><td>Validación 2: revisar avance, despejar dudas técnicas e iterar sobre flujos del mockup.</td></tr>
+                  <tr><td>Modalidad</td><td colspan="2" style="text-align:center;color:#5A6571;">Presencial</td></tr>
+                  <tr><td>Temas tratados</td><td>Análisis y definición conceptual de la idea. Lluvia de ideas sobre la problemática del cliente.</td><td>Revisión integral del primer mockup. Despeje de dudas operativas y de UX.</td></tr>
+                  <tr><td>Decisiones</td><td>Se aprueba el enfoque de diseño presentado. Se acuerda dar inicio al primer prototipo navegable.</td><td>Se aprueban modificaciones visuales. Se autoriza el inicio de ajustes en la plataforma e infraestructura.</td></tr>
+                  <tr><td>Próximos pasos</td><td>Estructurar primeros avances funcionales y presentación de cierre de la primera fase.</td><td>Ejecutar ajustes al sitio, conectar el sistema a la BD e iniciar la subida al servidor.</td></tr>
+                  <tr><td>Cambios Mockup</td><td>De solo reloj biométrico → página web completa + formulario + NFC.</td><td>Reestructuración del diseño (info, logo, elementos) y formulario embebido en la web.</td></tr>
+                  <tr><td>¿Por qué?</td><td>Los clientes necesitaban digitalizar su presencia institucional en un único ecosistema.</td><td>Alinear la estética con la imagen del cliente y mejorar la usabilidad.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div>
+            <p class="section-heading">Bitácora de Proyecto</p>
+            <div class="bitacora">
+              <div class="bita-month">Abril 2026</div>
+              <div class="bita-entry">
+                <span class="bita-date">15 abr</span>
+                <span class="tag tag-hito">Hito</span>
+                Primera entrevista realizada con Silvana y Sergio.
+              </div>
+              <div class="bita-entry">
+                <span class="bita-date">24 abr</span>
+                <span class="tag tag-dev">Dev</span>
+                Primeros desarrollos con el reloj biométrico. División de roles del equipo.
+              </div>
+
+              <div class="bita-month">Mayo 2026</div>
+              <div class="bita-entry">
+                <span class="bita-date">6 may</span>
+                <span class="tag tag-hito">Hito</span>
+                Primera presentación oficial realizada.
+              </div>
+              <div class="bita-entry">
+                <span class="bita-date">30 may</span>
+                <span class="tag tag-plan">Plan</span>
+                Primer diagrama de Gantt. Finalización de presentación (proyectos A y B).
+              </div>
+
+              <div class="bita-month">Junio 2026</div>
+              <div class="bita-entry">
+                <span class="bita-date">12 jun</span>
+                <span class="tag tag-hito">Hito</span>
+                Segunda entrevista. Integración exitosa del reloj biométrico con ZKTeco.
+              </div>
+              <div class="bita-entry">
+                <span class="bita-date">19 jun</span>
+                <span class="tag tag-plan">Plan</span>
+                Segundo diagrama de Gantt elaborado.
+              </div>
+              <div class="bita-entry">
+                <span class="bita-date">26 jun</span>
+                <span class="tag tag-dev">Dev</span>
+                Progreso en la página web y creación del formulario para clientes.
+              </div>
+              <div class="bita-entry">
+                <span class="bita-date">26 jun</span>
+                <span class="tag tag-prep">Prep</span>
+                Organización y armado para la segunda presentación.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         S18 · 17 · PRÓXIMOS PASOS
+         ══════════════════════════════════════ -->
+    <div class="slide" id="s18">
+      <div class="slide-content">
+        <div class="slide-number">17</div>
+        <h2 class="slide-title">Próximos Pasos</h2>
+        <div class="divider d-accent"></div>
+
+        <div class="ns-grid">
+
+          <div class="ns-card">
+            <div class="ns-num">1</div>
+            <div class="ns-title">Tarjetas NFC</div>
+            <p>
+              <strong>Configuración de Hardware:</strong> Adquirir las tarjetas y configurarlas
+              para que permitan abrir el sitio web al acercarlas a un dispositivo compatible.
+            </p>
+          </div>
+
+          <div class="ns-card">
+            <div class="ns-num">2</div>
+            <div class="ns-title">Diseño del Formulario de Calificación</div>
+            <p>
+              <strong>Redacción de Preguntas:</strong> Definir y estructurar el cuestionario final
+              para el filtrado de prospectos/clientes, asegurando que capture con precisión
+              las necesidades de recubrimiento industrial.
+            </p>
+          </div>
+
+          <div class="ns-card">
+            <div class="ns-num">3</div>
+            <div class="ns-title">Página de Recursos Humanos</div>
+            <p>
+              <strong>Sistema de control del reloj:</strong> Diseñar la vista del panel de administración
+              para la visualización de asistencia del personal, integrando los datos del
+              reloj biométrico ZKTeco.
+            </p>
+          </div>
+
+          <div class="ns-card">
+            <div class="ns-num">4</div>
+            <div class="ns-title">Tercera Entrevista de Control</div>
+            <p>
+              <strong>Ajustes finales:</strong> Llevar a cabo la tercera entrevista con los responsables
+              de TA-DIN para revisar minuciosamente el avance, validar los entregables
+              y definir los ajustes pendientes.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         S19 · CARATULA (CIERRE — duplicada)
+         ══════════════════════════════════════ -->
+    <div class="slide" id="s19">
+      <div class="cover-slide">
+        <div class="cover-top">
+          <div class="cover-meta">
+            <span class="cover-badge">Proyecto 1</span>
+            <span class="cover-badge">Equipo N°6</span>
+            <span class="cover-badge">7mo Informática B</span>
+            <span class="cover-badge">Julio 2026</span>
+          </div>
+          <h1 class="cover-brand">TADIN</h1>
+          <p class="cover-tagline">Digitalización de procesos para una empresa de pintura electrostática</p>
+          <div class="cover-divider"></div>
+        </div>
+        <div class="cover-team">
+          <div class="team-card">
+            <div class="team-initials">MN</div>
+            <div class="team-name">Mía Niello</div>
+            <div class="team-role">PM / Frontend</div>
+          </div>
+          <div class="team-card">
+            <div class="team-initials">CQ</div>
+            <div class="team-name">Catalina Quintana</div>
+            <div class="team-role">Frontend · UX/UI</div>
+          </div>
+          <div class="team-card">
+            <div class="team-initials">TB</div>
+            <div class="team-name">Tatiana Bravo</div>
+            <div class="team-role">Backend</div>
+          </div>
+          <div class="team-card">
+            <div class="team-initials">NP</div>
+            <div class="team-name">Nicolás Perri</div>
+            <div class="team-role">DB · Backend</div>
+          </div>
+          <div class="team-card">
+            <div class="team-initials">MC</div>
+            <div class="team-name">Milagros Camino</div>
+            <div class="team-role">Infraestructura · Seguridad</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /.slides-container -->
+
+  <!-- ════════════════ DOT NAV (19 puntos) ════════════════ -->
+  <div class="dot-nav">
+    <button class="dot cover-dot active" onclick="goTo(1)"  title="Portada"></button>
+    <button class="dot"                  onclick="goTo(2)"  title="01 · Objetivo"></button>
+    <button class="dot"                  onclick="goTo(3)"  title="02 · Requisitos Página Web"></button>
+    <button class="dot"                  onclick="goTo(4)"  title="03 · Requisitos Reloj Biométrico"></button>
+    <button class="dot img-dot"          onclick="goTo(5)"  title="Reloj · Imagen 1/4"></button>
+    <button class="dot img-dot"          onclick="goTo(6)"  title="Reloj · Imagen 2/4"></button>
+    <button class="dot img-dot"          onclick="goTo(7)"  title="Reloj · Imagen 3/4"></button>
+    <button class="dot img-dot"          onclick="goTo(8)"  title="Reloj · Imagen 4/4"></button>
+    <button class="dot"                  onclick="goTo(9)"  title="08 · Matriz"></button>
+    <button class="dot"                  onclick="goTo(10)" title="09 · Mockup / RF"></button>
+    <button class="dot ftp-dot"          onclick="goTo(11)" title="FTP · Paso 1"></button>
+    <button class="dot ftp-dot"          onclick="goTo(12)" title="FTP · Paso 2"></button>
+    <button class="dot ftp-dot"          onclick="goTo(13)" title="FTP · Paso 3"></button>
+    <button class="dot ftp-dot"          onclick="goTo(14)" title="FTP · Paso 4"></button>
+    <button class="dot ftp-dot"          onclick="goTo(15)" title="FTP · Paso 5"></button>
+    <button class="dot"                  onclick="goTo(16)" title="15 · Design System"></button>
+    <button class="dot"                  onclick="goTo(17)" title="16 · Documentación"></button>
+    <button class="dot"                  onclick="goTo(18)" title="17 · Próximos Pasos"></button>
+    <button class="dot cover-dot"        onclick="goTo(19)" title="Cierre"></button>
+  </div>
+
+  <!-- ════════════════ SCRIPT ════════════════ -->
+  <script>
+    const TOTAL = 19;
+    let cur = 1;
+
+    function goTo(n) {
+      if (n < 1 || n > TOTAL) return;
+      document.getElementById('s' + cur).classList.remove('active');
+      document.querySelectorAll('.dot')[cur - 1].classList.remove('active');
+      cur = n;
+      const slide = document.getElementById('s' + cur);
+      slide.classList.add('active');
+      slide.scrollTop = 0;
+      document.querySelectorAll('.dot')[cur - 1].classList.add('active');
+      document.getElementById('counter').textContent = cur + ' / ' + TOTAL;
+      document.getElementById('prev').disabled = cur === 1;
+      document.getElementById('next').disabled = cur === TOTAL;
+    }
+
+    function go(dir) { goTo(cur + dir); }
+
+    // ← → navegan entre slides · ↑ ↓ hacen scroll dentro del slide
+    document.addEventListener('keydown', e => {
+      switch (e.key) {
+        case 'ArrowRight':
+          e.preventDefault(); go(+1); break;
+        case 'ArrowLeft':
+          e.preventDefault(); go(-1); break;
+        case 'ArrowDown':
+          e.preventDefault();
+          document.getElementById('s' + cur).scrollBy({ top: 100, behavior: 'smooth' }); break;
+        case 'ArrowUp':
+          e.preventDefault();
+          document.getElementById('s' + cur).scrollBy({ top: -100, behavior: 'smooth' }); break;
+      }
+    });
+
+    // Swipe táctil
+    let touchX = 0;
+    document.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+    document.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - touchX;
+      if (Math.abs(dx) > 50) go(dx < 0 ? +1 : -1);
+    });
+
+    goTo(1);
+  </script>
+
+</body>
+</html>
